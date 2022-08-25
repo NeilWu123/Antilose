@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ip_address1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/IP_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编号"
+            android:textSize="20dp"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:id="@+id/Port_ET"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ip_address2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ip_address1"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/Connect_Bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接" />
+        <Button
+            android:id="@+id/Ring_Bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="声光报警" />
+        <Button
+            android:id="@+id/btnSendSMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送短信"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ip_address3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ip_address2"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/Sleep_Bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="省电模式" />
+        <Button
+            android:id="@+id/Dist_Bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取距离" />
+        <Button
+            android:id="@+id/Loct_Bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="定位" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ip_address4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ip_address3"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+    <TextView
+        android:id="@+id/Dist_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"/>
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/baiduMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
